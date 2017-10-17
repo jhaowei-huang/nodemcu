@@ -17,6 +17,7 @@ uart.on("data", "\n",
     d = string.sub(data, 0, #data - 1)
     print("receive from uart:", d)
     
+--    print("receive from uart:", string.sub(data, 0, #data - 1))
     if d=="quit" then
       uart.on("data") -- unregister callback function
     end
